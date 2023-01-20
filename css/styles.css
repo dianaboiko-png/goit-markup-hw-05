@@ -169,10 +169,31 @@ ul {
 
 
 /* підкреслення */
+.current {
+  display: block;
+  color: var(--active-button);
+  position: relative;
+}
+
+.current::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #4D5AE5;
+  border-radius: 2px;
+}
+
+
+
+/*
 .header-nav-link {
   position: relative;
   display: block;
   color: var(--main-text-color);
+  text-transform: uppercase;
   padding: 40px 0;
   outline: transparent;
 }
@@ -588,15 +609,22 @@ width: 40px;
   height: 100%;
   transform: translateY(0, 100%);
   background-color: var(--button-color);
+  color: #F4F4FD;
+  line-height:1.5 ;
+  font-size: 16px;
+  letter-spacing: 0.02em;
   padding: 40px 32px;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .overlay-txt {
- line-height: 1.5;
- letter-spacing: 0.02em;
- color: var(--main-backround-color);
+  color: #F4F4FD;
+  line-height: 1.5;
+  font-size: 16px;
+  letter-spacing: 0.02em;
 }
+
 
 .gal-item:hover .overlay {
   transform: translateY(0%);
